@@ -23,5 +23,5 @@ steps:
     uses: awsactions/s3-sync@v1
     with:
       source: dist
-      bucket: your-bucket-name
+      bucket: aws-final-task
       acl: public-read
