@@ -1,0 +1,28 @@
+name: Deploy to S3
+
+# Ejecuta este flujo de trabajo cuando haya un push a la rama main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # Instalar AWS CLI
+    - name: Setup AWS CLI
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AKIAZ5TC5I6PQNBVYBVG }}
+        aws-secret-access-key: ${{ secrets.2HM3AnP/TB04g1Bkfi+EiCPU639FoGQhMZhJGuUM }}
+        aws-region: us-west-1  # Cambia por tu región
+
+    # Sincronizar archivos con S3
+    - name: Sync files to S3
+      run: |
+        aws s3 sync . s3://aws-final-task --delete
