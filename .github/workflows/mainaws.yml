@@ -18,9 +18,9 @@ jobs:
     - name: Setup AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AKIAZ5TC5I6PQNBVYBVG }}
-        aws-secret-access-key: ${{ secrets.2HM3AnPTB04g1Bkfi+EiCPU639FoGQhMZhJGuUM }}
-        aws-region: us-west-1  # Cambia por tu región
+       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+       aws-region: us-west-1  # Cambia por tu región
 
     # Sincronizar archivos con S3
     - name: Sync files to S3
