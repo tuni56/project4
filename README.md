@@ -49,3 +49,5 @@ Click on the "Create repository" button to create your private repository.
 
 ## 3. Building the Simple Website
 I used VS Code in order to create a simple personal website just with a css style file and a JavaScript file.
+![uploadingfiles](https://github.com/user-attachments/assets/e455619a-761f-4209-ba34-7cc05cf841b1)
+
